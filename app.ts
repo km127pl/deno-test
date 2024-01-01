@@ -5,5 +5,5 @@ const app = fast();
 app.get("/", () => "Hello, World!");
 
 await app.serve({
-  port: 80,
+  port: parseInt(Deno.env.get("PORT")!), // railway provided port
 });
