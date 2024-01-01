@@ -4,4 +4,6 @@ const app = fast();
 
 app.get("/", () => "Hello, World!");
 
-await app.serve();
+await app.serve({
+  port: 80,
+});
